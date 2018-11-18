@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, View } from 'react-native';
 
-import Component4 from './app/components/Component4/Component4'
+import Component5 from './app/components/Component5/Component5'
 export default class leareact extends Component {
     render() {
         return (
             <View>
-                <Component4/>
+                <Component5/>
             </View>
         );
     }
