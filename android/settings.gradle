@@ -1,0 +1,3 @@
+rootProject.name = 'leareact'
+
+include ':app'
