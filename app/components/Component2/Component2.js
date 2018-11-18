@@ -1,14 +1,67 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, View } from 'react-native';
+import { AppRegistry, Text, View, StyleSheet } from 'react-native';
+import { red, green } from 'ansi-colors';
 
 export default class Component2 extends Component {
     render() {
         return (
             <View>
-                <Text>Hello meru</Text>
+                <View style={styles.myview}>
+                    <Text style={styles.mytext}>Hello meru</Text>
+                </View>
+                <View style={styles.container}>
+                    <View style={styles.v1}>
+                        <Text>View 1</Text>
+                    </View>
+                    <View style={styles.v2}>
+                        <Text>View 2</Text>
+                    </View>
+                    <View style={styles.v3}>
+                        <Text style={styles.vtext}>View 3</Text>
+                    </View>
+                    <View style={styles.v4}>
+                        <Text style={styles.vtext}>View 4</Text>
+                    </View>
+                </View>
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    myview:{
+        backgroundColor:'blue'
+    },
+    mytext:{
+        color:'white'
+    },
+    container:{
+        flexDirection:'row',
+        height:100
+    },
+    v1: {
+        flex: 1,
+        backgroundColor: 'red',
+        padding: 10
+    },
+    v2: {
+        flex: 1,
+        backgroundColor: 'green',
+        padding: 10
+    },
+    v3: {
+        flex: 1,
+        backgroundColor: 'black',
+        padding: 10,
+    },
+    vtext:{
+        color:'white'
+    },
+    v4: {
+        flex: 1,
+        backgroundColor: 'blue',
+        padding: 10
+    },
+});
 
 AppRegistry.registerComponent('Component2', () => Component2);
